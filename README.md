@@ -1,1 +1,1 @@
-# curso-webpack-react
+# react shop
