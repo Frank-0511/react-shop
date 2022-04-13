@@ -18,7 +18,8 @@
   "homepage": "https://github.com/Frank-0511/curso-webpack-react#readme",
   "dependencies": {
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
