@@ -1,14 +1,17 @@
-import * as React from 'react';
-
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Layout from '../containers/Layout';
+import Home from '../pages/Home';
+import Login from '../pages/Login';
+import PasswordRecovery from '../pages/PasswordRecovery';
+import SendEmail from '../pages/SendEmail';
+import NewPassword from '../pages/NewPassword';
+import MyAccount from '../pages/MyAccount';
+import CreateAccount from '../pages/CreateAccount';
+import Checkout from '../pages/Checkout';
+import Orders from '../pages/Orders';
+import NotFound from '../pages/NotFound';
 import '../styles/global.scss';
-
-import Home from '@pages/Home';
-import Layout from '@containers/Layout';
-import Login from '@containers/Login';
-import NotFound from '@pages/NotFound';
-import RecoveryPassword from '@containers/RecoveryPassword';
 
 const App = () => {
   return (
@@ -19,27 +22,17 @@ const App = () => {
           <Route exact path='login' element={<Login />} />
           <Route
             exact
-            path='recovery-password'
-            element={<RecoveryPassword />}
+            path='password-recovery'
+            element={<PasswordRecovery />}
           />
-          <Route exact path='*' element={<NotFound />} />
+          <Route exact path='send-email' element={<SendEmail />} />
+          <Route exact path='new-password' element={<NewPassword />} />
+          <Route exact path='account' element={<MyAccount />} />
+          <Route exact path='signup' element={<CreateAccount />} />
+          <Route exact path='checkout' element={<Checkout />} />
+          <Route exact path='orders' element={<Orders />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
-        <div className='list'>
-          <ul>
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='login'>Login</Link>
-            </li>
-            <li>
-              <Link to='recovery-password'>RecoveryPassword</Link>
-            </li>
-            <li>
-              <Link to='page3'>Page 3</Link>
-            </li>
-          </ul>
-        </div>
       </Router>
     </Layout>
   );
