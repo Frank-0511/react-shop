@@ -1,37 +1,52 @@
-import '../styles/Login.scss';
+import "@styles/Login.scss";
+import logoYardSale from "@logos/logo_yard_sale.svg";
+import React, { useRef } from "react";
 
 const Login = () => {
+  const form = useRef(null);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(form.current);
+    const data = {
+      email: formData.get("email"),
+      password: formData.get("password"),
+    };
+    console.table(data);
+  };
+
   return (
-    <div className='Login'>
-      <div className='Login-container'>
-        <img src='./logos/logo_yard_sale.svg' alt='logo' className='logo' />
-        <form action='/' className='form'>
-          <label htmlFor='email' className='label'>
+    <div className="Login">
+      <div className="Login-container">
+        <img src={logoYardSale} alt="logo" className="logo" />
+        <form action="/" className="form" ref={form}>
+          <label htmlFor="email" className="label">
             Email address
           </label>
           <input
-            type='text'
-            id='email'
-            placeholder='platzi@example.cm'
-            className='input input-email'
+            type="text"
+            name="email"
+            placeholder="platzi@example.cm"
+            className="input input-email"
           />
-          <label htmlFor='password' className='label'>
+          <label htmlFor="password" className="label">
             Password
           </label>
           <input
-            type='password'
-            id='password'
-            placeholder='*********'
-            className='input input-password'
+            type="password"
+            name="password"
+            placeholder="*********"
+            className="input input-password"
           />
-          <input
-            type='submit'
-            value='Log in'
-            className='primary-button login-button'
-          />
-          <a href='/'>Forgot my password</a>
+          <button
+            className="primary-button login-button"
+            onClick={handleSubmit}
+          >
+            Log in
+          </button>
+          <a href="/">Forgot my password</a>
         </form>
-        <button className='secondary-button signup-button'>Sign up</button>
+        <button className="secondary-button signup-button">Sign up</button>
       </div>
     </div>
   );
