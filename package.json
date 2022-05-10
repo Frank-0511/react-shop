@@ -9,7 +9,7 @@
     "build": "webpack --config webpack.config.js",
     "prepare": "husky install",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b gh-pages -d dist"
+    "deploy": "gh-pages -b deploy-page -d dist"
   },
   "repository": "git+https://github.com/Frank-0511/react-shop.git",
   "keywords": [],
