@@ -11,12 +11,12 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -b main -d dist"
   },
-  "repository": "git+https://github.com/Frank-0511/curso-webpack-react.git",
+  "repository": "git+https://github.com/Frank-0511/react-shop.git",
   "keywords": [],
   "author": "Frank Villanueva <frank05111996@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Frank-0511/curso-webpack-react/issues"
+    "url": "https://github.com/Frank-0511/react-shop/issues"
   },
   "homepage": "https://frank-0511.github.io/react-shop/",
   "dependencies": {
