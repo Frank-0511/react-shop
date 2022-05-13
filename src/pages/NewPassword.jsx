@@ -1,3 +1,4 @@
+import React from "react";
 import "../styles/NewPassword.scss";
 import logoYardSale from "@logos/logo_yard_sale.svg";
 
