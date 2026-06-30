@@ -47,7 +47,7 @@
     "terser-webpack-plugin": "^5.3.1",
     "webpack": "^5.104.1",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^5.2.1"
+    "webpack-dev-server": "^5.2.5"
   },
   "private": true,
   "lint-staged": {
